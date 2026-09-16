@@ -1,0 +1,24 @@
+name: Hello
+
+on:
+  workflow_dispatch: 
+#  push:
+#    branches: [main]
+
+jobs:
+
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello to users
+        run: echo "Hello Dosto"
+
+      - name: say hello to username
+        run: echo "Hello $USER"
+        
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show what is the version of docker and python
+        run: docker --version && python --version
+
